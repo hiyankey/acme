@@ -14,10 +14,24 @@ async function seedUsers() {
 
   return users
 }
+async function seedInboxes() {
+  const users = await prisma.user.findMany()
+
+  for (const user of users) {
+    await prisma.inbox.create({
+      data: {
+        content: `Hi there, ${user.name}`,
+        userId: user.id,
+      },
+    })
+  }
+
+  console.log('Inboxes seeded successfull')
+}
 
 export async function GET() {
   try {
-    await seedUsers()
+    await Promise.all([seedInboxes(), seedUsers()])
 
     return Response.json({ message: 'Database seeded successfully' })
   } catch (error) {
