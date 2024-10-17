@@ -9,6 +9,7 @@ async function seedUsers() {
       { name: 'Rauch', email: 'rauch@email.com' },
       { name: 'Daryl', email: 'daryl@email.com' },
     ],
+    skipDuplicates: true,
   })
 
   return users
