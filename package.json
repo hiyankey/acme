@@ -1,0 +1,12 @@
+{
+  "name": "acme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --parallel dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

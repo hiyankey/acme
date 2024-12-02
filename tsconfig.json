@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "strict": true,
+        "paths": {
+            "@web/*": [
+                "apps/web/*"
+            ],
+            "@server/*": [
+                "apps/server/*"
+            ],
+        }
+    }
+}
