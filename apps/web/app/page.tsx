@@ -1,12 +1,22 @@
-import { redirect } from "next/navigation";
+
 import { trpc } from "./lib/trpc";
 import { CreateUser } from "./ui/create-user";
 import { deleteUser } from "./lib/actions";
 import { TrashIcon } from "@iconicicons/react";
 
-
+interface User {
+  id: number;
+  email: string;
+  profile: {
+    id: number;
+    name: string;
+    createdAt: string;
+    updatedAt: string;
+    userId: number;
+  } | null;
+}
 export default async function Home() {
-  const users = await trpc.getUsers.query()
+  const users: User[] = await trpc.getUsers.query()
   return (
     <main>
       <CreateUser />
