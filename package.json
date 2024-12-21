@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm --parallel dev",
+    "build": "pnpm --filter=web build && pnpm --filter=server build",
    
 
 
