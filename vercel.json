@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "apps/web": {
+      "buildCommand": "pnpm --filter=web build",
+      "installCommand": "pnpm install"
+    },
+    "apps/server": {
+      "buildCommand": "pnpm --filter=server build",
+      "installCommand": "pnpm install"
+    }
+  }
+}
