@@ -9,7 +9,7 @@ const CreateUserSchema = z.object({
     email: z.string().email({ message: 'Insert valid email' }),
     profile: z.object({
         name: z.string(),
-        createdAt: z.date()
+        created_at: z.date()
     })
 })
 const DeleteUserSchema = z.object({
