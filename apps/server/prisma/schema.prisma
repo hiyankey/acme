@@ -10,7 +10,7 @@ datasource db {
 model profile {
   id         Int      @id @default(autoincrement())
   name       String
-  created_at DateTime @default(now())
+  createdAt DateTime @default(now())
   updated_at DateTime
   user_id    Int      @unique
   user       user     @relation(fields: [user_id], references: [id], onDelete: Cascade)
