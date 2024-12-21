@@ -21,7 +21,7 @@ export async function createUser(formData: FormData) {
         email: formData.get('email'),
         profile: {
             name: formData.get('name'),
-            createdAt: new Date()
+            created_at: new Date()
         }
     })
     await prisma.user.create({
@@ -30,7 +30,7 @@ export async function createUser(formData: FormData) {
             profile: {
                 create: {
                     name: data.profile.name,
-                    createdAt: data.profile.createdAt
+                    created_at: data.profile.createdAt
                 }
             }
         }
