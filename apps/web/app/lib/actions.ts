@@ -9,7 +9,7 @@ const CreateUserSchema = z.object({
     email: z.string().email({ message: 'Insert valid email' }),
     profile: z.object({
         name: z.string(),
-        created_at: z.date()
+        createdAt: z.date()
     })
 })
 const DeleteUserSchema = z.object({
@@ -21,7 +21,7 @@ export async function createUser(formData: FormData) {
         email: formData.get('email'),
         profile: {
             name: formData.get('name'),
-            created_at: new Date()
+            createdAt: new Date()
         }
     })
     await prisma.user.create({
@@ -30,7 +30,7 @@ export async function createUser(formData: FormData) {
             profile: {
                 create: {
                     name: data.profile.name,
-                    created_at: data.profile.createdAt
+                    createdAt: data.profile.createdAt
                 }
             }
         }
