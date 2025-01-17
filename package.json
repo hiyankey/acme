@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "next dev --turbopack",
 		"migrate:dev": "pnpx prisma migrate dev",
-		"build": "next build",
+		"build": "pnpx prisma generate && next build",
 		"start": "next start",
 		"lint": "next lint"
 	},
