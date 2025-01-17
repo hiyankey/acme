@@ -7,7 +7,7 @@ import { ArrowRight } from "./ui/icons/arrow-right";
 export default function Home() {
 	return (
 		<main>
-			<Container className="h-[200vh] bg-page-main pt-[calc(var(--header-height)+24px)] border-x border-dashed border-[#fff]/[.1] ">
+			<Container className="bg-page-main pt-[calc(var(--header-height)+24px)] border-x-[3px] border-spacing-[2px] border-dashed border-[#fff]/[.1] ">
 				<Hero>
 					<div className="flex flex-col items-center max-w-[80rem] mx-auto">
 						<Button
