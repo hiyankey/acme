@@ -1,10 +1,12 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import Link from "next/link";
+import { ClientButton } from "./client-button";
 
 interface ButtonProps extends VariantProps<typeof buttonClasses> {
 	className?: string;
-	href: string;
+	href?: string;
 	children: React.ReactNode;
+	type?: "submit" | "reset" | "button";
 }
 
 const buttonClasses = cva(
@@ -27,19 +29,32 @@ const buttonClasses = cva(
 		},
 	},
 );
+
 export function Button({
 	className,
 	href,
 	children,
 	variant,
 	size,
+	type,
 }: ButtonProps) {
 	return (
-		<Link
-			className={`${className} ${buttonClasses({ variant, size })}`}
-			href={href}
-		>
-			{children}
-		</Link>
+		<>
+			{href ? (
+				<Link
+					className={`${className} ${buttonClasses({ variant, size })}`}
+					href={href}
+				>
+					{children}
+				</Link>
+			) : (
+				<button
+					className={`${className} ${buttonClasses({ variant, size })}`}
+					type={type}
+				>
+					{children}
+				</button>
+			)}
+		</>
 	);
 }

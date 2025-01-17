@@ -3,23 +3,32 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev --turbopack",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
+		"dotenvx": "dotenvx",
+		"dev": "dotenvx run -- next dev --turbopack",
+		"migrate:dev": "dotenvx run -- pnpx prisma migrate dev",
+		"build": "dotenvx run -- next build",
+		"start": "dotenvx run -- next start",
+		"lint": "dotenvx run -- next lint"
 	},
 	"dependencies": {
+		"@prisma/client": "^6.2.1",
 		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
 		"motion": "^11.18.0",
 		"next": "15.1.4",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
+		"react-dom": "^19.0.0",
+		"sonner": "^1.7.2",
+		"tailwind-merge": "^2.6.0",
+		"tailwind-variants": "^0.3.0",
+		"zod": "^3.24.1"
 	},
 	"devDependencies": {
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"postcss": "^8",
+		"prisma": "^6.2.1",
 		"tailwindcss": "^3.4.1",
 		"typescript": "^5"
 	}

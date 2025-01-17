@@ -9,6 +9,13 @@ export default {
 					main: "#000",
 				},
 			},
+			backgroundImage: {
+				"primary-gradient":
+					"linear-gradient(180deg, #FE2A00 0%, #FF5500 100%);",
+			},
+			boxShadow: {
+				btn: "inset 0px 0px 1px rgba(255, 255, 255, 0.12), inset 0px 0.5px 0 rgba(255, 255, 255, 0.12)",
+			},
 		},
 		fontFamily: {
 			sans: "var(--font-geist-sans)",
@@ -39,12 +46,6 @@ export default {
 			11: "4.4rem",
 			12: "4.8rem",
 			"header-height": "var(--header-height)",
-		},
-		backgroundImage: {
-			"primary-gradient": "linear-gradient(180deg, #FE2A00 0%, #FF5500 100%);",
-		},
-		boxShadow: {
-			btn: "inset 0px 0px 1px rgba(255, 255, 255, 0.12), inset 0px 0.5px 0 rgba(255, 255, 255, 0.12)",
 		},
 	},
 	plugins: [],
