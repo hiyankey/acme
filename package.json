@@ -3,12 +3,11 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dotenvx": "dotenvx",
-		"dev": "dotenvx run -- next dev --turbopack",
-		"migrate:dev": "dotenvx run -- pnpx prisma migrate dev",
-		"build": "dotenvx run -- next build",
-		"start": "dotenvx run -- next start",
-		"lint": "dotenvx run -- next lint"
+		"dev": "next dev --turbopack",
+		"migrate:dev": "pnpx prisma migrate dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
 	},
 	"dependencies": {
 		"@prisma/client": "^6.2.1",
@@ -30,7 +29,6 @@
 		"postcss": "^8",
 		"prisma": "^6.2.1",
 		"tailwindcss": "^3.4.1",
-		"typescript": "^5",
-		"@dotenvx/dotenvx": "1.33.0"
+		"typescript": "^5"
 	}
 }
