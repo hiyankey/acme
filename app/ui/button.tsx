@@ -1,6 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import Link from "next/link";
-import { ClientButton } from "./client-button";
 
 interface ButtonProps extends VariantProps<typeof buttonClasses> {
 	className?: string;
