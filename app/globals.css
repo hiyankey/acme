@@ -12,5 +12,5 @@
 	}
 	body {
 		@apply w-screen min-h-[100dvh] grid grid-rows-[auto_1fr_auto] bg-black font-sans text-rg text-white;
-			}
+	}
 }

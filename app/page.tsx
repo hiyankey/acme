@@ -11,7 +11,7 @@ export default function Home() {
 				<Hero>
 					<div className="flex flex-col items-center max-w-[80rem] mx-auto">
 						<Button href="#" variant={"secondary"} size={"sm"}>
-							Jolly v1.0.0 soon <ArrowRight className="ml-3" />
+							Jolly v1.0.0 soon <ArrowRight className="ml-3 h-3 w-3" />
 						</Button>
 						<Headline className="mb-4">Streamline your workflow</Headline>
 						<Caption className="mb-8">
