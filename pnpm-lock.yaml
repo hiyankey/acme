@@ -43,7 +43,7 @@ importers:
         version: 3.24.1
     devDependencies:
       '@dotenvx/dotenvx':
-        specifier: ^1.33.0
+        specifier: 1.33.0
         version: 1.33.0
       '@types/node':
         specifier: ^20
