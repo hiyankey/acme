@@ -38,7 +38,7 @@ export function Header() {
 			transition={{ duration: 0.2 }}
 		>
 			<Container
-				className={`md:bg-transparent items-start py-[1.1rem] backdrop-blur-[12px] md:items-center rounded-[1.6rem] border-[#fff]/[.08] border flex px-5 md:h-header-height relative transition-all delay-300 ${isOpen ? "h-[calc(100vh-var(--header-height))] bg-black" : "h-header-height items-start bg-transparent"}`}
+				className={`md:bg-transparent items-start py-[1.1rem] backdrop-blur-[12px] md:items-center rounded-[1.6rem] border-[#fff]/[.08] border flex px-5 md:h-header-height relative transition-all delay-300 ${isOpen ? "h-screen bg-black" : "h-header-height items-start bg-transparent"}`}
 			>
 				<Link href={"/"} className="flex items-center">
 					<Logo className="mr-3" /> Acme
