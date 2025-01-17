@@ -27,18 +27,16 @@ const footerLinks = [
 export function Footer() {
 	return (
 		<footer>
-			<Container className="border-t bg-page-main border-x border-dashed border-[#fff]/[.1] py-10 px-[2.4rem] flex md:flex-row flex-col justify-between items-start w-full">
-				<div className="flex flex-row lg:flex-col justify-between w-[32rem]  h-full">
-					<div className="flex items-center">
-						<Logo className="inline-flex mr-3" /> Acme
-					</div>
+			<Container className="border-t bg-page-main border-x border-dashed border-[#fff]/[.1] py-10 px-[2.4rem]  w-full grid grid-rows-[1fr_auto_1fr] md:grid-cols-[1fr_auto_1fr]">
+				<div className="flex items-center w-full h-full">
+					<Logo className="inline-flex mr-3" /> Acme
 				</div>
 
 				<div className="flex flex-wrap w-full">
 					{footerLinks.map((column) => (
 						<div
 							key={column.title}
-							className="min-w-[50%] mt-10  lg:mt-0 lg:min-w-[18rem]"
+							className="min-w-[50%] mt-10  md:mt-0 lg:min-w-[18rem]"
 						>
 							<h4 className="mb-3 text-sm">{column.title}</h4>
 							<ul className="[&_a]:text-[#999] [&_a:hover]:text-[#c9c9c9] [&_a]:text-sm [&_li]:mb-3 [&_a]:transition-colors ease-in">
@@ -51,7 +49,7 @@ export function Footer() {
 						</div>
 					))}
 				</div>
-				<form className="max-w-[32rem]  mt-10  lg:mt-0   flex flex-col space-y-4 items-center">
+				<form className="max-w-[32rem]  mt-10  md:mt-0   flex flex-col space-y-4 items-center">
 					<h3 className="text-center text-sm">
 						Join newsletter to hear more about new features and updates.
 					</h3>

@@ -14,18 +14,22 @@ export default function Home() {
 							href="#"
 							variant={"secondary"}
 							size={"sm"}
-							className="group"
+							className="group animate-fade-in opacity-0 [--animation-delay:0ms] mb-3"
 						>
-							Acme v1.0.0 soon{" "}
+							Acme v1.0.0 soon
 							<ArrowRight className="ml-3 h-3 group-hover:translate-x-1 w-3" />
 						</Button>
-						<Headline className="mb-4">
+						<Headline className="mb-6 animate-fade-in opacity-0 [--animation-delay:200ms]">
 							Headline wraps a minimum of 2 lines
 						</Headline>
-						<Caption className="mb-8">
+						<Caption className="mb-8 animate-fade-in opacity-0 [--animation-delay:400ms]">
 							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						</Caption>
-						<Button href={"#"} size={"lg"}>
+						<Button
+							href={"#"}
+							size={"lg"}
+							className="animate-fade-in opacity-0 [--animation-delay:600ms]"
+						>
 							Get started
 						</Button>
 					</div>

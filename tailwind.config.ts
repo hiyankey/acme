@@ -47,6 +47,15 @@ export default {
 			12: "4.8rem",
 			"header-height": "var(--header-height)",
 		},
+		keyframes: {
+			"fade-in": {
+				from: { opacity: "0", transform: "translateY(-10px)" },
+				to: { opacity: "1", transform: "none" },
+			},
+		},
+		animation: {
+			"fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
+		},
 	},
 	plugins: [],
 } satisfies Config;
