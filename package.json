@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dotenvx": "dotenvx",
+		"dotenvx": "pnpx dotenvx",
 		"dev": "dotenvx run -- next dev --turbopack",
 		"migrate:dev": "dotenvx run -- pnpx prisma migrate dev",
 		"build": "dotenvx run -- next build",
