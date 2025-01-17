@@ -4,8 +4,6 @@ import { Container } from "./container";
 import { Logo } from "./icons/logo";
 import { Button } from "./button";
 import { InputFocusBlur } from "./input-focus-blur";
-import { Toaster, toast } from "sonner";
-import { handleJoinWaitlist } from "../lib/actions";
 
 const footerLinks = [
 	{
@@ -56,7 +54,6 @@ export function Footer() {
 						<Button className="shrink-1" type={"submit"}>
 							Join waitlist
 						</Button>
-						<Toaster />
 					</div>
 					<p className="text-sm text-[#999]">No spam ever</p>
 				</form>

@@ -18,5 +18,4 @@ export const handleJoinWaitlist = async (formData: FormData) => {
 		},
 	});
 	revalidatePath("/");
-	return userEmail;
 };
