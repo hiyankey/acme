@@ -6,6 +6,7 @@ import { Logo } from "./icons/logo";
 import Link from "next/link";
 import { Button } from "./button";
 import { MenuIcon } from "./icons/menu";
+import { CrossIcon } from "./icons/cross";
 
 export function Header() {
 	const [isHidden, setIsHidden] = useState(false);
@@ -44,7 +45,7 @@ export function Header() {
 				</Link>
 				<div className="ml-auto flex items-center space-x-5">
 					<nav
-						className={`md:visible transition-[visibility] delay-300 ${isOpen ? "visible " : "invisible"}`}
+						className={`md:visible md:flex transition-[visibility] delay-300 ${isOpen ? "visible " : "invisible"}`}
 					>
 						<ul
 							className={`flex flex-col left-0 top-[--header-height] px-6 md:px-0 w-full md:auto md:top-0 fixed md:relative md:opacity-100 md:flex-row md:[&_li]:ml-3 md:[&_a]:text-sm [&_a]:text-[#999] [&_a:hover]:text-[#c9c9c9] transition-opacity duration-500 [&_li]:h-header-height [&_li]:flex [&_li]:items-center  md:[&_li]:h-auto [&_a]:text-lg [&_a]:transition-colors ease-in ${isOpen ? "opacity-100" : "opacity-0"}`}
@@ -69,13 +70,15 @@ export function Header() {
 						</Button>
 						<Button href="#">Sign up</Button>
 					</div>
-					<button
-						type="button"
-						className="md:hidden"
-						onClick={() => setIsOpen((prev) => !prev)}
-					>
-						<MenuIcon />
-					</button>
+					<div className="h-full flex items-center">
+						<button
+							type="button"
+							className="md:hidden"
+							onClick={() => setIsOpen((prev) => !prev)}
+						>
+							{isOpen ? <CrossIcon /> : <MenuIcon />}
+						</button>
+					</div>
 				</div>
 			</Container>
 		</motion.header>
