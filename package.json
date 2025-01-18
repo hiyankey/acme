@@ -3,11 +3,12 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev --turbopack",
+		"dotenvx": "dotenvx",
+		"dev": "dotenvx run -- next dev --turbopack",
 		"migrate:dev": "pnpx prisma migrate dev",
-		"build": "pnpx prisma generate && next build",
-		"start": "next start",
-		"lint": "next lint"
+		"build": "pnpx prisma generate && dotenvx run -- next build",
+		"start": "dotenvx run -- next start",
+		"lint": "dotenvx run -- next lint"
 	},
 	"dependencies": {
 		"@clerk/nextjs": "^6.9.12",
@@ -30,6 +31,7 @@
 		"postcss": "^8",
 		"prisma": "^6.2.1",
 		"tailwindcss": "^3.4.1",
-		"typescript": "^5"
+		"typescript": "^5",
+		"@dotenvx/dotenvx": "1.33.0"
 	}
 }
