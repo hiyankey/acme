@@ -11,6 +11,9 @@ importers:
       '@clerk/nextjs':
         specifier: ^6.9.12
         version: 6.9.12(next@15.1.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@clerk/themes':
+        specifier: ^2.2.8
+        version: 2.2.8
       '@prisma/client':
         specifier: ^6.2.1
         version: 6.2.1(prisma@6.2.1)
@@ -107,8 +110,16 @@ packages:
       react-dom:
         optional: true
 
+  '@clerk/themes@2.2.8':
+    resolution: {integrity: sha512-OSmkNr8xSKMOOvqBr65SrUR2Bi52XKXTcmkpbijLXU+xwpBC0Zdy0412wwLFIFioV936zl4//EMp50ffCyiADQ==}
+    engines: {node: '>=18.17.0'}
+
   '@clerk/types@4.41.0':
     resolution: {integrity: sha512-pSIDJ6WKmkPLAThzuXABFt/K581iLjsZSOU7e+hDdb1PRElKi11stMJruDU8UjLBNFksZUG5Cfkt0iGrVQmpXw==}
+    engines: {node: '>=18.17.0'}
+
+  '@clerk/types@4.41.1':
+    resolution: {integrity: sha512-Vz1jkHPUzJCVqR/Vmnjpab6hTsfV/Gt2y5W88Pv22xCyeFgmXwxqwu9dLyxMio32ekajRKI9S9hX5LxO0Vsx/Q==}
     engines: {node: '>=18.17.0'}
 
   '@dotenvx/dotenvx@1.33.0':
@@ -1105,7 +1116,16 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
+  '@clerk/themes@2.2.8':
+    dependencies:
+      '@clerk/types': 4.41.1
+      tslib: 2.4.1
+
   '@clerk/types@4.41.0':
+    dependencies:
+      csstype: 3.1.1
+
+  '@clerk/types@4.41.1':
     dependencies:
       csstype: 3.1.1
 
