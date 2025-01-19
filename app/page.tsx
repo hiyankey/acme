@@ -4,10 +4,11 @@ import { Button } from "./ui/button";
 import { ArrowRight } from "./ui/icons/arrow-right";
 import { Header } from "./ui/header";
 import { Footer } from "./ui/footer";
+import appJson from "../package.json";
 
 export default function Home() {
 	return (
-		<div className="grid grid-rows-[auto_1fr_auto] bg-[url('/bg-pattern.png')] bg-cover w-full">
+		<div className="grid grid-rows-[auto_1fr_auto]  w-full ">
 			<Header />
 			<main>
 				<Container className="bg-page-main pt-[calc(var(--header-height)+24px)] border-x border-dashed border-[#fff]/[.1]">
@@ -19,7 +20,7 @@ export default function Home() {
 								size={"sm"}
 								className="group translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms] mb-3"
 							>
-								Acme v1.0.0 soon
+								Acme v{Number.parseInt(appJson.version) + 1} soon
 								<ArrowRight className="ml-3 h-3 group-hover:translate-x-1 w-3 transition-transform ease" />
 							</Button>
 							<Headline className="mb-6 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">

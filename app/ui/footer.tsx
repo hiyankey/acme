@@ -4,6 +4,7 @@ import { Container } from "./container";
 import { Logo } from "./icons/logo";
 import { Button } from "./button";
 import { InputFocusBlur } from "./input-focus-blur";
+import { handleJoinWaitlist } from "../lib/actions";
 
 const footerLinks = [
 	{
@@ -49,7 +50,10 @@ export function Footer() {
 						</div>
 					))}
 				</div>
-				<form className="max-w-[32rem]  mt-10  md:mt-0   flex flex-col space-y-4 items-center">
+				<form
+					className="max-w-[32rem]  mt-10  md:mt-0   flex flex-col space-y-4 items-center"
+					action={handleJoinWaitlist}
+				>
 					<h3 className="text-center text-sm">
 						Join newsletter to hear more about new features and updates.
 					</h3>

@@ -7,6 +7,8 @@ import Link from "next/link";
 import { Button } from "./button";
 import { MenuIcon } from "./icons/menu";
 import { CrossIcon } from "./icons/cross";
+import { SignedOut, SignInButton } from "@clerk/nextjs";
+import appJson from "../../package.json";
 
 export function Header() {
 	const [isHidden, setIsHidden] = useState(false);
@@ -38,7 +40,7 @@ export function Header() {
 			transition={{ duration: 0.2 }}
 		>
 			<Container
-				className={`md:bg-transparent items-start py-[1.1rem] backdrop-blur-[12px] md:items-center rounded-[1.6rem] border-[#fff]/[.08] border flex px-5 md:h-header-height relative transition-all delay-300 z-20 ${isOpen ? "h-screen bg-black" : "h-header-height items-start bg-transparent"}`}
+				className={`md:bg-transparent items-start py-[1.1rem] backdrop-blur-[12px] md:items-center rounded-[1.6rem] border-[#fff]/[.08] border flex px-5 md:h-header-height relative transition-all delay-300 z-20 shadow-[inset_0_0_1px_0_hsla(0,_100%,_100%,_12%)] ${isOpen ? "h-screen bg-black" : "h-header-height items-start bg-transparent"}`}
 			>
 				<Link href={"/"} className="flex items-center">
 					<Logo className="mr-3" /> Acme
@@ -65,9 +67,12 @@ export function Header() {
 						</ul>
 					</nav>
 					<div className="flex space-x-3">
-						<Button href="#" variant={"secondary"}>
-							Log in
-						</Button>
+						<SignInButton>
+							<Button href="#" variant={"secondary"}>
+								Log in
+							</Button>
+						</SignInButton>
+
 						<Button href="#">Sign up</Button>
 					</div>
 					<div className="flex items-center md:hidden">

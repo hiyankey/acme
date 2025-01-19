@@ -12,8 +12,8 @@ export const handleJoinWaitlist = async (formData: FormData) => {
 	if (!parsedEmail.success) {
 		throw new Error("Invalid email format");
 	}
-	const userEmail = await prisma.user.create({
-		data: {
+	const userEmail = await prisma.user.findUnique({
+		where: {
 			email: parsedEmail.data,
 		},
 	});

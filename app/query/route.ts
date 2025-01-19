@@ -1,17 +1,22 @@
 import { prisma } from "../lib/db";
-
-async function getUserEmail() {
-	const user = await prisma.user.findUnique({
-		where: {
-			email: "hi@email.xyz",
+import { useUser } from "@clerk/nextjs";
+async function createUserSession() {
+	const { user } = useUser();
+	const email = user?.primaryEmailAddress?.emailAddress;
+	if (!email) {
+		throw new Error("Email is required!");
+	}
+	const newUser = await prisma.user.create({
+		data: {
+			email,
 		},
 	});
-	return user?.email;
+	return newUser;
 }
 
 export async function GET() {
 	try {
-		return Response.json(await getUserEmail());
+		return Response.json(await createUserSession());
 	} catch (error) {
 		return Response.json({ error }, { status: 500 });
 	}

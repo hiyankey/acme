@@ -1,17 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Header } from "./ui/header";
-import { Footer } from "./ui/footer";
-import {
-	ClerkProvider,
-	SignedIn,
-	SignedOut,
-	SignIn,
-	SignOutButton,
-	UserButton,
-	UserProfile,
-} from "@clerk/nextjs";
+
+import { ClerkProvider, SignedIn, SignedOut, SignIn } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 
 const geistSans = Geist({
@@ -40,24 +31,20 @@ export default function RootLayout({
 				baseTheme: dark,
 				variables: {
 					colorPrimary: "#ff5500",
+					colorBackground: "#000",
+					colorInputBackground: "transparent",
+					colorInputText: "#999",
+					colorText: "#999",
 				},
 			}}
 		>
 			<html lang="en" suppressHydrationWarning>
 				<body
-					className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+					className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/bg-pattern.png')] bg-cover Root`}
 				>
-					<div className="w-full h-full flex items-center justify-center">
+					<div className="w-full flex items-center justify-center">
 						<SignedOut>
-							<SignIn
-								routing={"hash"}
-								appearance={{
-									variables: {
-										fontSize: "1.6rem",
-										colorBackground: "#ffffff08",
-									},
-								}}
-							/>
+							<SignIn path={"/sign-in"} />
 						</SignedOut>
 					</div>
 

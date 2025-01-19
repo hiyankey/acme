@@ -11,7 +11,13 @@
 		font-size: 62.5%;
 	}
 	body {
-		@apply w-screen min-h-[100dvh] bg-black font-sans text-rg text-white;
+		@apply w-screen min-h-[100dvh] bg-black font-sans text-rg text-white Root;
 		font-size: 1.6rem;
+	}
+}
+
+@layer utilities {
+	.Root {
+		isolation: isolate;
 	}
 }
