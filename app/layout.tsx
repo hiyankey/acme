@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import { ClerkProvider, SignedIn, SignedOut, SignIn } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
-
 const geistSans = Geist({
 	variable: "--font-geist-sans",
 	subsets: ["latin"],
@@ -26,31 +23,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<ClerkProvider
-			appearance={{
-				baseTheme: dark,
-				variables: {
-					colorPrimary: "#ff5500",
-					colorBackground: "#000",
-					colorInputBackground: "transparent",
-					colorInputText: "#999",
-					colorText: "#999",
-				},
-			}}
-		>
-			<html lang="en" suppressHydrationWarning>
-				<body
-					className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/bg-pattern.png')] bg-cover Root`}
-				>
-					<div className="w-full flex items-center justify-center">
-						<SignedOut>
-							<SignIn path={"/sign-in"} />
-						</SignedOut>
-					</div>
-
-					<SignedIn>{children}</SignedIn>
-				</body>
-			</html>
-		</ClerkProvider>
+		<html lang="en" suppressHydrationWarning>
+			<body
+				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/bg-pattern.png')] bg-cover Root`}
+			>
+				{children}
+			</body>
+		</html>
 	);
 }

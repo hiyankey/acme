@@ -7,8 +7,6 @@ import Link from "next/link";
 import { Button } from "./button";
 import { MenuIcon } from "./icons/menu";
 import { CrossIcon } from "./icons/cross";
-import { SignedOut, SignInButton } from "@clerk/nextjs";
-import appJson from "../../package.json";
 
 export function Header() {
 	const [isHidden, setIsHidden] = useState(false);
@@ -67,11 +65,9 @@ export function Header() {
 						</ul>
 					</nav>
 					<div className="flex space-x-3">
-						<SignInButton>
-							<Button href="#" variant={"secondary"}>
-								Log in
-							</Button>
-						</SignInButton>
+						<Button href="#" variant={"secondary"}>
+							Log in
+						</Button>
 
 						<Button href="#">Sign up</Button>
 					</div>
