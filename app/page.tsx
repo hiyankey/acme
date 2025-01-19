@@ -5,6 +5,11 @@ import { ArrowRight } from "./ui/icons/arrow-right";
 import { Header } from "./ui/header";
 import { Footer } from "./ui/footer";
 import appJson from "../package.json";
+import { SocialProof } from "./ui/social-proof";
+import { Whop } from "./ui/icons/whop";
+import { Raycast } from "./ui/icons/raycast";
+import { Linear } from "./ui/icons/linear";
+import { Vercel } from "./ui/icons/vercel";
 
 export default function Home() {
 	return (
@@ -39,6 +44,12 @@ export default function Home() {
 							</Button>
 						</div>
 					</Hero>
+					<SocialProof className="flex w-full justify-between text-[#999] px-6 py-3">
+						<Whop />
+						<Raycast />
+						<Linear /> <Vercel />
+						<span className="text-xl font-semibold">You?</span>
+					</SocialProof>
 				</Container>
 			</main>
 			<Footer />
