@@ -17,6 +17,15 @@
 }
 
 @layer utilities {
+	.mask-gradient-to-r {
+		mask-image: linear-gradient(
+			to right,
+			transparent,
+			black 6.4rem,
+			black calc(100% - 6.4rem),
+			transparent
+		);
+	}
 	.Root {
 		isolation: isolate;
 	}

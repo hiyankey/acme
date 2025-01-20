@@ -52,9 +52,14 @@ export default {
 				from: { opacity: "0", transform: "translateY(-10px)" },
 				to: { opacity: "1", transform: "none" },
 			},
+			translateLeft: {
+				to: { transform: "translateX(-50%)" },
+			},
 		},
 		animation: {
-			"fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
+			"fade-in": "fade-in 1000ms var(--animation-delay,0ms) ease forwards",
+			moveLeft:
+				"translateLeft var(--duration,10s) var(--delay,0s) linear infinite var(--direction,forwards)",
 		},
 	},
 	plugins: [],

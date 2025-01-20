@@ -44,11 +44,19 @@ export default function Home() {
 							</Button>
 						</div>
 					</Hero>
-					<SocialProof className="flex w-full justify-between text-[#999] px-6 py-3">
-						<Whop />
-						<Raycast />
-						<Linear /> <Vercel />
-						<span className="text-xl font-semibold">You?</span>
+					<SocialProof className="w-full text-[#999] px-6 py-3 overflow-clip mask-gradient-to-r">
+						<div className="animate-moveLeft w-[max-content] flex gap-[6.4rem] pl-[6.4rem]">
+							<Whop />
+							<Raycast />
+							<Linear />
+							<Vercel />
+							<span className="text-xl font-semibold">You?</span>
+							<Whop />
+							<Raycast />
+							<Linear />
+							<Vercel />
+							<span className="text-xl font-semibold">You?</span>
+						</div>
 					</SocialProof>
 				</Container>
 			</main>
