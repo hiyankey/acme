@@ -12,9 +12,14 @@ export default {
 			backgroundImage: {
 				"primary-gradient":
 					"linear-gradient(180deg, #FE2A00 0%, #FF5500 100%);",
+				"stripe-pattern":
+					"repeating-linear-gradient(var(--degree,45deg), hsl(var(--border)), transparent 12.5%, transparent 50%)",
 			},
 			boxShadow: {
 				btn: "inset 0px 0px 1px rgba(255, 255, 255, 0.12), inset 0px 0.5px 0 rgba(255, 255, 255, 0.12)",
+			},
+			backgroundSize: {
+				"40x40": ".4rem .4rem",
 			},
 		},
 		fontFamily: {

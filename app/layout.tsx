@@ -25,7 +25,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/bg-pattern.png')] bg-cover Root`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-stripe-pattern bg-40x40 Root`}
 			>
 				{children}
 			</body>

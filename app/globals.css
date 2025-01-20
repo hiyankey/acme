@@ -4,6 +4,7 @@
 
 :root {
 	--header-height: 5.6rem;
+	--border: 0, 0%, 8%;
 }
 
 @layer base {
@@ -21,8 +22,8 @@
 		mask-image: linear-gradient(
 			to right,
 			transparent,
-			black 6.4rem,
-			black calc(100% - 6.4rem),
+			black 10rem,
+			black calc(100% - 10rem),
 			transparent
 		);
 	}
